@@ -1,0 +1,76 @@
+body,
+html {
+    height: 100%;
+    margin: 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100%;
+    background-image: url('../assets/backgroundImage.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    /*justify-content: center;*/
+    align-items: center;
+    color: white;
+}
+
+.header {
+    margin-top: 50px;
+    display: flex;
+    height: 70px;
+    justify-content: center;
+    align-items: center;
+    padding: 2px;
+    font-family: logoFont;
+    font-size: 70px;
+}
+
+#logo {
+    height: 70px;
+}
+
+summary {
+    font-family: textFont, sans-serif;
+    font-size: 30px;
+    margin-top: 15px;
+}
+
+@font-face {
+    font-family: logoFont;
+    src: url('../fonts/Domotika-Regular-trial.ttf');
+}
+
+@font-face {
+    font-family: textFont;
+    src: url('../fonts/GeosansLight.ttf');
+}
+
+@media only screen and (max-width: 768px) {
+    #logo {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+    }
+    .header>span {
+        font-size: 50px;
+        line-height: 1px;
+    }
+    .header {
+        display: inline-table;
+    }
+    summary {
+        text-align: center;
+        width: 90%;
+        border-radius: 10px;
+        background-image: linear-gradient(to top right, rgba(43, 40, 50, 0.8) 0%, rgba(83, 86, 99, 0.8) 45%, rgba(69, 77, 91, 0.6) 60%);
+    }
+}
