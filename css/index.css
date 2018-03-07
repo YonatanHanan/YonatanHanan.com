@@ -40,6 +40,10 @@ body {
     font-size: 4.5em;
 }
 
+.header>span {
+    padding-left: 10px;
+}
+
 #logo {
     height: 70px;
 }
