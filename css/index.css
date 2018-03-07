@@ -18,9 +18,15 @@ body {
     display: flex;
     flex-direction: column;
     align-content: center;
-    /*justify-content: center;*/
+    justify-content: center;
     align-items: center;
     color: white;
+}
+
+.wrapper {
+    position: absolute;
+    top: 50px;
+    left: 50px;
 }
 
 .header {
@@ -31,7 +37,7 @@ body {
     align-items: center;
     padding: 2px;
     font-family: logoFont;
-    font-size: 70px;
+    font-size: 4.5em;
 }
 
 #logo {
@@ -42,6 +48,8 @@ summary {
     font-family: textFont, sans-serif;
     font-size: 30px;
     margin-top: 15px;
+    position: relative;
+    left: 50px;
 }
 
 @font-face {
@@ -54,23 +62,80 @@ summary {
     src: url('../fonts/GeosansLight.ttf');
 }
 
+footer {
+    padding-top: 50px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+li {
+    display: inline;
+    border-radius: 100%;
+    border: solid 2px #fff;
+    font-size: 1.75em;
+    height: 2.5em;
+    line-height: 2.5em;
+    width: 2.5em;
+    text-align: center;
+    color: white;
+    transition: all 1s;
+}
+
+li>a>i {
+    color: white;
+    font-size: 1em;
+    height: 2.5em;
+    line-height: 2.5em;
+    width: 2.5em;
+}
+
+li:hover {
+    background-image: linear-gradient(to top right, rgba(43, 40, 50, 0.8) 0%, rgba(83, 86, 99, 0.8) 45%, rgba(69, 77, 91, 0.6) 60%);
+}
+
 @media only screen and (max-width: 768px) {
+    body {
+        background-position-x: -510px;
+    }
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        /*justify-content: center;*/
+        align-content: center;
+        align-items: center;
+        left: 0px;
+    }
     #logo {
         display: flex;
         align-content: center;
         justify-content: center;
     }
     .header>span {
-        font-size: 50px;
+        font-size: 45px;
         line-height: 1px;
     }
     .header {
+        margin-top: 0px;
         display: inline-table;
     }
     summary {
+        left: 0px;
         text-align: center;
-        width: 90%;
-        border-radius: 10px;
         background-image: linear-gradient(to top right, rgba(43, 40, 50, 0.8) 0%, rgba(83, 86, 99, 0.8) 45%, rgba(69, 77, 91, 0.6) 60%);
+    }
+    summary div {
+        padding: 10px;
+    }
+    footer {
+        width: 100%;
+    }
+    li {
+        background-color: black;
     }
 }
