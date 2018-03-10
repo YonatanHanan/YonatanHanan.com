@@ -78,25 +78,28 @@ ul {
     justify-content: space-around;
 }
 
+.fab,
+.far,
+.fas {
+    text-decoration: none;
+    color: white;
+    position: relative;
+    height: 2.5em;
+    line-height: 2.5em;
+    width: 2.5em;
+}
+
 li {
-    display: inline;
     border-radius: 100%;
     border: solid 2px #fff;
     font-size: 1.75em;
     height: 2.5em;
+    position: relative;
     line-height: 2.5em;
     width: 2.5em;
     text-align: center;
     color: white;
     transition: all 1s;
-}
-
-li>a>i {
-    color: white;
-    font-size: 1em;
-    height: 2.5em;
-    line-height: 2.5em;
-    width: 2.5em;
 }
 
 li:hover {
